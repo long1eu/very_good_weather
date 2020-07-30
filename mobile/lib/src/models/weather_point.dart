@@ -19,11 +19,6 @@ abstract class WeatherPoint implements Built<WeatherPoint, WeatherPointBuilder> 
   @BuiltValueField(wireName: 'weather_state_abbr')
   String get weatherStateAbbr;
 
-  @BuiltValueField(wireName: 'wind_direction_compass')
-  String get windDirectionCompass;
-
-  DateTime get created;
-
   @BuiltValueField(wireName: 'applicable_date')
   DateTime get applicableDate;
 
@@ -36,21 +31,10 @@ abstract class WeatherPoint implements Built<WeatherPoint, WeatherPointBuilder> 
   @BuiltValueField(wireName: 'the_temp')
   double get theTemp;
 
-  @BuiltValueField(wireName: 'wind_speed')
-  double get windSpeed;
-
-  @BuiltValueField(wireName: 'wind_direction')
-  double get windDirection;
-
-  @BuiltValueField(wireName: 'air_pressure')
-  num get airPressure;
-
   int get humidity;
 
   // in miles
   double get visibility;
-
-  int get predictability;
 
   String getVisibility(MeasurementUnit unit) {
     if (unit == MeasurementUnit.metric) {

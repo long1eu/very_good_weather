@@ -11,6 +11,7 @@ import 'package:very_good_weather/src/models/index.dart';
 
 part 'location_api.dart';
 part 'meta_weather_api.dart';
+part 'util.dart';
 
 T resultOrThrow<T>(Response<T> response) {
   if (response.isSuccessful) {

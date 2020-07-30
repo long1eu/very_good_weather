@@ -16,4 +16,3 @@ part 'location.dart';
 part 'location_weather.dart';
 part 'measurement_unit.dart';
 part 'weather_point.dart';
-part 'weather_source.dart';

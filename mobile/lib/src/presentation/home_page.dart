@@ -12,6 +12,7 @@ import 'package:very_good_weather/src/containers/location_whether_container.dart
 import 'package:very_good_weather/src/containers/locations_container.dart';
 import 'package:very_good_weather/src/containers/selected_location_container.dart';
 import 'package:very_good_weather/src/containers/selected_measurement_unit_container.dart';
+import 'package:very_good_weather/src/data/index.dart';
 import 'package:very_good_weather/src/models/index.dart';
 import 'package:very_good_weather/src/presentation/mixins/store_mixin.dart';
 import 'package:very_good_weather/src/presentation/search_page.dart';
@@ -90,7 +91,7 @@ class _HomePageState extends State<HomePage> with StoreMixin<HomePage> {
                               }
 
                               final WeatherPoint currentPoint = weather.weather.firstWhere(
-                                  (WeatherPoint element) => isToday(element.applicableDate),
+                                  (WeatherPoint element) => element.applicableDate.isToday,
                                   orElse: () => weather.weather.first);
 
                               return SelectedMeasurementUnitContainer(
@@ -161,9 +162,4 @@ class _HomePageState extends State<HomePage> with StoreMixin<HomePage> {
       },
     );
   }
-}
-
-bool isToday(DateTime date) {
-  final DateTime now = DateTime.now();
-  return date.year == now.year && date.month == now.month && date.day == now.day;
 }

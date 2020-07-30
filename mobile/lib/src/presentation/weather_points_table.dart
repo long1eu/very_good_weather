@@ -7,6 +7,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:intl/intl.dart';
 import 'package:very_good_weather/src/containers/selected_measurement_unit_container.dart';
+import 'package:very_good_weather/src/data/index.dart';
 import 'package:very_good_weather/src/models/index.dart';
 
 final DateFormat dayFormat = DateFormat.EEEE();
@@ -32,14 +33,13 @@ class WeatherPointsTable extends StatelessWidget {
             points.length,
             (int index) {
               final WeatherPoint item = points[index];
-              final bool isForToday = isToday(item.applicableDate);
 
               return TableRow(
                 children: <Widget>[
                   Container(
                     margin: const EdgeInsets.symmetric(vertical: 8.0),
                     child: Text(
-                      '${dayFormat.format(item.applicableDate).toLowerCase()}${isForToday ? ' TODAY' : ''}',
+                      '${dayFormat.format(item.applicableDate).toLowerCase()}${item.applicableDate.isToday ? ' TODAY' : ''}',
                     ),
                   ),
                   SvgPicture.asset('res/svg/${item.weatherStateAbbr}.svg'),
@@ -66,9 +66,4 @@ class WeatherPointsTable extends StatelessWidget {
       },
     );
   }
-}
-
-bool isToday(DateTime date) {
-  final DateTime now = DateTime.now();
-  return date.year == now.year && date.month == now.month && date.day == now.day;
 }

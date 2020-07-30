@@ -14,30 +14,14 @@ abstract class LocationWeather implements Built<LocationWeather, LocationWeather
   @BuiltValueField(wireName: 'woeid')
   int get id;
 
-  String get title;
-
-  @BuiltValueField(wireName: 'location_type')
-  String get locationType;
-
   @BuiltValueField(wireName: 'consolidated_weather')
   BuiltList<WeatherPoint> get weather;
-
-  DateTime get time;
 
   @BuiltValueField(wireName: 'sun_rise')
   DateTime get sunRise;
 
   @BuiltValueField(wireName: 'sun_set')
   DateTime get sunSet;
-
-  @BuiltValueField(wireName: 'timezone_name')
-  String get timezoneName;
-
-  String get timezone;
-
-  Location get parent;
-
-  BuiltList<WeatherSource> get sources;
 
   @memoized
   List<WeatherPoint> get futureWeather {

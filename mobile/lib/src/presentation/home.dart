@@ -31,7 +31,7 @@ class _HomeState extends State<Home> with StoreMixin<Home> {
   }
 
   void _onResult(AppAction action) {
-    //
+    // todo: show error dialog
   }
 
   @override

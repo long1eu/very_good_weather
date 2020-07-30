@@ -26,27 +26,27 @@ class SearchPage extends StatefulWidget {
 }
 
 class _SearchPageState extends State<SearchPage> with StoreMixin<SearchPage> {
-  final TextEditingController controller = TextEditingController();
-  final FocusNode node = FocusNode();
+  final TextEditingController _controller = TextEditingController();
+  final FocusNode _node = FocusNode();
 
   @override
   void initState() {
     super.initState();
-    controller.addListener(_onTextChanged);
+    _controller.addListener(_onTextChanged);
   }
 
   void _onTextChanged() {
     setState(() {
       // this will change the prefix icon
     });
-    if (controller.text.isNotEmpty) {
-      dispatch(SearchLocation.query(controller.text));
+    if (_controller.text.isNotEmpty) {
+      dispatch(SearchLocation.query(_controller.text));
     }
   }
 
   @override
   void dispose() {
-    controller.dispose();
+    _controller.dispose();
     super.dispose();
   }
 
@@ -57,10 +57,10 @@ class _SearchPageState extends State<SearchPage> with StoreMixin<SearchPage> {
         title: IsSearchingContainer(
           builder: (BuildContext context, bool isSearching) {
             return TextField(
-              controller: controller,
+              controller: _controller,
               autofocus: true,
               textInputAction: TextInputAction.search,
-              focusNode: node,
+              focusNode: _node,
               textCapitalization: TextCapitalization.words,
               decoration: InputDecoration(
                 hintText: 'location',
@@ -68,12 +68,12 @@ class _SearchPageState extends State<SearchPage> with StoreMixin<SearchPage> {
                 suffixIcon: isSearching
                     ? const LoadingIndicator()
                     : IconButton(
-                        icon: Icon(controller.text.isEmpty ? Icons.search : Icons.clear),
+                        icon: Icon(_controller.text.isEmpty ? Icons.search : Icons.clear),
                         onPressed: () {
-                          if (controller.text.isEmpty) {
-                            FocusScope.of(context).requestFocus(node);
+                          if (_controller.text.isEmpty) {
+                            FocusScope.of(context).requestFocus(_node);
                           } else {
-                            controller.clear();
+                            _controller.clear();
                           }
                         },
                       ),
