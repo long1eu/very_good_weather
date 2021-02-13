@@ -27,18 +27,16 @@ class MetaWeatherEpics {
     return actions //
         .distinct()
         .debounceTime(const Duration(milliseconds: 500))
-        .switchMap((SearchLocationQuery action) => _api
-            .search(action.query)
-            .asStream()
+        .switchMap((SearchLocationQuery action) => Stream<void>.value(null)
+            .asyncMap((_) => _api.search(action.query))
             .map((List<Location> locations) => SearchLocation.successful(locations))
             .onErrorReturnWith((dynamic error) => SearchLocation.error(error)));
   }
 
   Stream<AppAction> _getWeatherData(Stream<GetWeatherData$> actions, EpicStore<AppState> store) {
     return actions //
-        .flatMap((GetWeatherData$ action) => _api
-            .getLocationWeather(action.locationId)
-            .asStream()
+        .flatMap((GetWeatherData$ action) => Stream<void>.value(null)
+            .asyncMap((_) => _api.getLocationWeather(action.locationId))
             .map((LocationWeather data) => GetWeatherData.successful(data, action.pendingId))
             .onErrorReturnWith((dynamic error) => GetWeatherData.error(error, action.pendingId)));
   }

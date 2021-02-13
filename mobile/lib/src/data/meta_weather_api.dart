@@ -5,19 +5,23 @@
 part of data;
 
 class MetaWeatherApi {
-  const MetaWeatherApi({@required MetaWeatherService service})
-      : assert(service != null),
-        _service = service;
+  const MetaWeatherApi({@required Client client})
+      : assert(client != null),
+        _client = client;
 
-  final MetaWeatherService _service;
+  final Client _client;
 
   Future<List<Location>> search(String query) async {
-    final Response<List<Location>> response = await _service.search(query);
-    return resultOrThrow(response);
+    final Response response = await _client.get('https://www.metaweather.com/api/location/search?query=$query');
+
+    return List<dynamic>.from(jsonDecode(response.body) as List<dynamic>) //
+        .map((dynamic item) => Location.fromJson(item))
+        .toList();
   }
 
   Future<LocationWeather> getLocationWeather(int id) async {
-    final Response<LocationWeather> response = await _service.getLocationWeather(id);
-    return resultOrThrow(response);
+    final Response response = await _client.get('https://www.metaweather.com/api/location/$id');
+
+    return LocationWeather.fromJson(jsonDecode(response.body));
   }
 }

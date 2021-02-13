@@ -65,7 +65,9 @@ mixin _$GetLocation {
 }
 
 abstract class $GetLocationCopyWith<$Res> {
-  factory $GetLocationCopyWith(GetLocation value, $Res Function(GetLocation) then) = _$GetLocationCopyWithImpl<$Res>;
+  factory $GetLocationCopyWith(
+          GetLocation value, $Res Function(GetLocation) then) =
+      _$GetLocationCopyWithImpl<$Res>;
 }
 
 class _$GetLocationCopyWithImpl<$Res> implements $GetLocationCopyWith<$Res> {
@@ -77,12 +79,15 @@ class _$GetLocationCopyWithImpl<$Res> implements $GetLocationCopyWith<$Res> {
 }
 
 abstract class $GetLocation$CopyWith<$Res> {
-  factory $GetLocation$CopyWith(GetLocation$ value, $Res Function(GetLocation$) then) =
+  factory $GetLocation$CopyWith(
+          GetLocation$ value, $Res Function(GetLocation$) then) =
       _$GetLocation$CopyWithImpl<$Res>;
 }
 
-class _$GetLocation$CopyWithImpl<$Res> extends _$GetLocationCopyWithImpl<$Res> implements $GetLocation$CopyWith<$Res> {
-  _$GetLocation$CopyWithImpl(GetLocation$ _value, $Res Function(GetLocation$) _then)
+class _$GetLocation$CopyWithImpl<$Res> extends _$GetLocationCopyWithImpl<$Res>
+    implements $GetLocation$CopyWith<$Res> {
+  _$GetLocation$CopyWithImpl(
+      GetLocation$ _value, $Res Function(GetLocation$) _then)
       : super(_value, (v) => _then(v as GetLocation$));
 
   @override
@@ -167,14 +172,17 @@ abstract class GetLocation$ implements GetLocation {
 }
 
 abstract class $GetLocationSuccessfulCopyWith<$Res> {
-  factory $GetLocationSuccessfulCopyWith(GetLocationSuccessful value, $Res Function(GetLocationSuccessful) then) =
+  factory $GetLocationSuccessfulCopyWith(GetLocationSuccessful value,
+          $Res Function(GetLocationSuccessful) then) =
       _$GetLocationSuccessfulCopyWithImpl<$Res>;
   $Res call({LatLng location});
 }
 
-class _$GetLocationSuccessfulCopyWithImpl<$Res> extends _$GetLocationCopyWithImpl<$Res>
+class _$GetLocationSuccessfulCopyWithImpl<$Res>
+    extends _$GetLocationCopyWithImpl<$Res>
     implements $GetLocationSuccessfulCopyWith<$Res> {
-  _$GetLocationSuccessfulCopyWithImpl(GetLocationSuccessful _value, $Res Function(GetLocationSuccessful) _then)
+  _$GetLocationSuccessfulCopyWithImpl(
+      GetLocationSuccessful _value, $Res Function(GetLocationSuccessful) _then)
       : super(_value, (v) => _then(v as GetLocationSuccessful));
 
   @override
@@ -205,15 +213,19 @@ class _$GetLocationSuccessful implements GetLocationSuccessful {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is GetLocationSuccessful &&
-            (identical(other.location, location) || const DeepCollectionEquality().equals(other.location, location)));
+            (identical(other.location, location) ||
+                const DeepCollectionEquality()
+                    .equals(other.location, location)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode ^ const DeepCollectionEquality().hash(location);
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(location);
 
   @override
   $GetLocationSuccessfulCopyWith<GetLocationSuccessful> get copyWith =>
-      _$GetLocationSuccessfulCopyWithImpl<GetLocationSuccessful>(this, _$identity);
+      _$GetLocationSuccessfulCopyWithImpl<GetLocationSuccessful>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -273,21 +285,25 @@ class _$GetLocationSuccessful implements GetLocationSuccessful {
 }
 
 abstract class GetLocationSuccessful implements GetLocation {
-  const factory GetLocationSuccessful(LatLng location) = _$GetLocationSuccessful;
+  const factory GetLocationSuccessful(LatLng location) =
+      _$GetLocationSuccessful;
 
   LatLng get location;
   $GetLocationSuccessfulCopyWith<GetLocationSuccessful> get copyWith;
 }
 
 abstract class $GetLocationErrorCopyWith<$Res> {
-  factory $GetLocationErrorCopyWith(GetLocationError value, $Res Function(GetLocationError) then) =
+  factory $GetLocationErrorCopyWith(
+          GetLocationError value, $Res Function(GetLocationError) then) =
       _$GetLocationErrorCopyWithImpl<$Res>;
   $Res call({Object error});
 }
 
-class _$GetLocationErrorCopyWithImpl<$Res> extends _$GetLocationCopyWithImpl<$Res>
+class _$GetLocationErrorCopyWithImpl<$Res>
+    extends _$GetLocationCopyWithImpl<$Res>
     implements $GetLocationErrorCopyWith<$Res> {
-  _$GetLocationErrorCopyWithImpl(GetLocationError _value, $Res Function(GetLocationError) _then)
+  _$GetLocationErrorCopyWithImpl(
+      GetLocationError _value, $Res Function(GetLocationError) _then)
       : super(_value, (v) => _then(v as GetLocationError));
 
   @override
@@ -319,11 +335,13 @@ class _$GetLocationError implements GetLocationError {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is GetLocationError &&
-            (identical(other.error, error) || const DeepCollectionEquality().equals(other.error, error)));
+            (identical(other.error, error) ||
+                const DeepCollectionEquality().equals(other.error, error)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode ^ const DeepCollectionEquality().hash(error);
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(error);
 
   @override
   $GetLocationErrorCopyWith<GetLocationError> get copyWith =>
@@ -405,7 +423,8 @@ class _$GetWeatherDataTearOff {
   }
 
 // ignore: unused_element
-  GetWeatherDataSuccessful successful(LocationWeather weather, String pendingId) {
+  GetWeatherDataSuccessful successful(
+      LocationWeather weather, String pendingId) {
     return GetWeatherDataSuccessful(
       weather,
       pendingId,
@@ -458,12 +477,14 @@ mixin _$GetWeatherData {
 }
 
 abstract class $GetWeatherDataCopyWith<$Res> {
-  factory $GetWeatherDataCopyWith(GetWeatherData value, $Res Function(GetWeatherData) then) =
+  factory $GetWeatherDataCopyWith(
+          GetWeatherData value, $Res Function(GetWeatherData) then) =
       _$GetWeatherDataCopyWithImpl<$Res>;
   $Res call({String pendingId});
 }
 
-class _$GetWeatherDataCopyWithImpl<$Res> implements $GetWeatherDataCopyWith<$Res> {
+class _$GetWeatherDataCopyWithImpl<$Res>
+    implements $GetWeatherDataCopyWith<$Res> {
   _$GetWeatherDataCopyWithImpl(this._value, this._then);
 
   final GetWeatherData _value;
@@ -480,16 +501,20 @@ class _$GetWeatherDataCopyWithImpl<$Res> implements $GetWeatherDataCopyWith<$Res
   }
 }
 
-abstract class $GetWeatherData$CopyWith<$Res> implements $GetWeatherDataCopyWith<$Res> {
-  factory $GetWeatherData$CopyWith(GetWeatherData$ value, $Res Function(GetWeatherData$) then) =
+abstract class $GetWeatherData$CopyWith<$Res>
+    implements $GetWeatherDataCopyWith<$Res> {
+  factory $GetWeatherData$CopyWith(
+          GetWeatherData$ value, $Res Function(GetWeatherData$) then) =
       _$GetWeatherData$CopyWithImpl<$Res>;
   @override
   $Res call({int locationId, String pendingId});
 }
 
-class _$GetWeatherData$CopyWithImpl<$Res> extends _$GetWeatherDataCopyWithImpl<$Res>
+class _$GetWeatherData$CopyWithImpl<$Res>
+    extends _$GetWeatherDataCopyWithImpl<$Res>
     implements $GetWeatherData$CopyWith<$Res> {
-  _$GetWeatherData$CopyWithImpl(GetWeatherData$ _value, $Res Function(GetWeatherData$) _then)
+  _$GetWeatherData$CopyWithImpl(
+      GetWeatherData$ _value, $Res Function(GetWeatherData$) _then)
       : super(_value, (v) => _then(v as GetWeatherData$));
 
   @override
@@ -528,9 +553,11 @@ class _$GetWeatherData$ implements GetWeatherData$ {
     return identical(this, other) ||
         (other is GetWeatherData$ &&
             (identical(other.locationId, locationId) ||
-                const DeepCollectionEquality().equals(other.locationId, locationId)) &&
+                const DeepCollectionEquality()
+                    .equals(other.locationId, locationId)) &&
             (identical(other.pendingId, pendingId) ||
-                const DeepCollectionEquality().equals(other.pendingId, pendingId)));
+                const DeepCollectionEquality()
+                    .equals(other.pendingId, pendingId)));
   }
 
   @override
@@ -601,7 +628,8 @@ class _$GetWeatherData$ implements GetWeatherData$ {
 }
 
 abstract class GetWeatherData$ implements GetWeatherData, ActionStart {
-  const factory GetWeatherData$(int locationId, String pendingId) = _$GetWeatherData$;
+  const factory GetWeatherData$(int locationId, String pendingId) =
+      _$GetWeatherData$;
 
   int get locationId;
   @override
@@ -610,21 +638,25 @@ abstract class GetWeatherData$ implements GetWeatherData, ActionStart {
   $GetWeatherData$CopyWith<GetWeatherData$> get copyWith;
 }
 
-abstract class $GetWeatherDataSuccessfulCopyWith<$Res> implements $GetWeatherDataCopyWith<$Res> {
-  factory $GetWeatherDataSuccessfulCopyWith(
-          GetWeatherDataSuccessful value, $Res Function(GetWeatherDataSuccessful) then) =
+abstract class $GetWeatherDataSuccessfulCopyWith<$Res>
+    implements $GetWeatherDataCopyWith<$Res> {
+  factory $GetWeatherDataSuccessfulCopyWith(GetWeatherDataSuccessful value,
+          $Res Function(GetWeatherDataSuccessful) then) =
       _$GetWeatherDataSuccessfulCopyWithImpl<$Res>;
   @override
   $Res call({LocationWeather weather, String pendingId});
 }
 
-class _$GetWeatherDataSuccessfulCopyWithImpl<$Res> extends _$GetWeatherDataCopyWithImpl<$Res>
+class _$GetWeatherDataSuccessfulCopyWithImpl<$Res>
+    extends _$GetWeatherDataCopyWithImpl<$Res>
     implements $GetWeatherDataSuccessfulCopyWith<$Res> {
-  _$GetWeatherDataSuccessfulCopyWithImpl(GetWeatherDataSuccessful _value, $Res Function(GetWeatherDataSuccessful) _then)
+  _$GetWeatherDataSuccessfulCopyWithImpl(GetWeatherDataSuccessful _value,
+      $Res Function(GetWeatherDataSuccessful) _then)
       : super(_value, (v) => _then(v as GetWeatherDataSuccessful));
 
   @override
-  GetWeatherDataSuccessful get _value => super._value as GetWeatherDataSuccessful;
+  GetWeatherDataSuccessful get _value =>
+      super._value as GetWeatherDataSuccessful;
 
   @override
   $Res call({
@@ -658,9 +690,12 @@ class _$GetWeatherDataSuccessful implements GetWeatherDataSuccessful {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is GetWeatherDataSuccessful &&
-            (identical(other.weather, weather) || const DeepCollectionEquality().equals(other.weather, weather)) &&
+            (identical(other.weather, weather) ||
+                const DeepCollectionEquality()
+                    .equals(other.weather, weather)) &&
             (identical(other.pendingId, pendingId) ||
-                const DeepCollectionEquality().equals(other.pendingId, pendingId)));
+                const DeepCollectionEquality()
+                    .equals(other.pendingId, pendingId)));
   }
 
   @override
@@ -671,7 +706,8 @@ class _$GetWeatherDataSuccessful implements GetWeatherDataSuccessful {
 
   @override
   $GetWeatherDataSuccessfulCopyWith<GetWeatherDataSuccessful> get copyWith =>
-      _$GetWeatherDataSuccessfulCopyWithImpl<GetWeatherDataSuccessful>(this, _$identity);
+      _$GetWeatherDataSuccessfulCopyWithImpl<GetWeatherDataSuccessful>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -731,7 +767,8 @@ class _$GetWeatherDataSuccessful implements GetWeatherDataSuccessful {
 }
 
 abstract class GetWeatherDataSuccessful implements GetWeatherData, ActionDone {
-  const factory GetWeatherDataSuccessful(LocationWeather weather, String pendingId) = _$GetWeatherDataSuccessful;
+  const factory GetWeatherDataSuccessful(
+      LocationWeather weather, String pendingId) = _$GetWeatherDataSuccessful;
 
   LocationWeather get weather;
   @override
@@ -740,16 +777,20 @@ abstract class GetWeatherDataSuccessful implements GetWeatherData, ActionDone {
   $GetWeatherDataSuccessfulCopyWith<GetWeatherDataSuccessful> get copyWith;
 }
 
-abstract class $GetWeatherDataErrorCopyWith<$Res> implements $GetWeatherDataCopyWith<$Res> {
-  factory $GetWeatherDataErrorCopyWith(GetWeatherDataError value, $Res Function(GetWeatherDataError) then) =
+abstract class $GetWeatherDataErrorCopyWith<$Res>
+    implements $GetWeatherDataCopyWith<$Res> {
+  factory $GetWeatherDataErrorCopyWith(
+          GetWeatherDataError value, $Res Function(GetWeatherDataError) then) =
       _$GetWeatherDataErrorCopyWithImpl<$Res>;
   @override
   $Res call({Object error, String pendingId});
 }
 
-class _$GetWeatherDataErrorCopyWithImpl<$Res> extends _$GetWeatherDataCopyWithImpl<$Res>
+class _$GetWeatherDataErrorCopyWithImpl<$Res>
+    extends _$GetWeatherDataCopyWithImpl<$Res>
     implements $GetWeatherDataErrorCopyWith<$Res> {
-  _$GetWeatherDataErrorCopyWithImpl(GetWeatherDataError _value, $Res Function(GetWeatherDataError) _then)
+  _$GetWeatherDataErrorCopyWithImpl(
+      GetWeatherDataError _value, $Res Function(GetWeatherDataError) _then)
       : super(_value, (v) => _then(v as GetWeatherDataError));
 
   @override
@@ -788,9 +829,11 @@ class _$GetWeatherDataError implements GetWeatherDataError {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is GetWeatherDataError &&
-            (identical(other.error, error) || const DeepCollectionEquality().equals(other.error, error)) &&
+            (identical(other.error, error) ||
+                const DeepCollectionEquality().equals(other.error, error)) &&
             (identical(other.pendingId, pendingId) ||
-                const DeepCollectionEquality().equals(other.pendingId, pendingId)));
+                const DeepCollectionEquality()
+                    .equals(other.pendingId, pendingId)));
   }
 
   @override
@@ -860,8 +903,10 @@ class _$GetWeatherDataError implements GetWeatherDataError {
   }
 }
 
-abstract class GetWeatherDataError implements GetWeatherData, ActionDone, ErrorAction {
-  const factory GetWeatherDataError(Object error, String pendingId) = _$GetWeatherDataError;
+abstract class GetWeatherDataError
+    implements GetWeatherData, ActionDone, ErrorAction {
+  const factory GetWeatherDataError(Object error, String pendingId) =
+      _$GetWeatherDataError;
 
   Object get error;
   @override
@@ -874,7 +919,8 @@ class _$InitializeAppTearOff {
   const _$InitializeAppTearOff();
 
 // ignore: unused_element
-  InitializeAppStart start(void Function(AppAction) result, {String pendingId = _kInitializeAppPendingId}) {
+  InitializeAppStart start(void Function(AppAction) result,
+      {String pendingId = _kInitializeAppPendingId}) {
     return InitializeAppStart(
       result,
       pendingId: pendingId,
@@ -882,7 +928,10 @@ class _$InitializeAppTearOff {
   }
 
 // ignore: unused_element
-  InitializeAppUpdate update({LatLng location, Location currentLocation, LocationWeather weatherData}) {
+  InitializeAppUpdate update(
+      {LatLng location,
+      Location currentLocation,
+      LocationWeather weatherData}) {
     return InitializeAppUpdate(
       location: location,
       currentLocation: currentLocation,
@@ -891,14 +940,16 @@ class _$InitializeAppTearOff {
   }
 
 // ignore: unused_element
-  InitializeAppSuccessful successful({String pendingId = _kInitializeAppPendingId}) {
+  InitializeAppSuccessful successful(
+      {String pendingId = _kInitializeAppPendingId}) {
     return InitializeAppSuccessful(
       pendingId: pendingId,
     );
   }
 
 // ignore: unused_element
-  InitializeAppError error(Object error, [String pendingId = _kInitializeAppPendingId]) {
+  InitializeAppError error(Object error,
+      [String pendingId = _kInitializeAppPendingId]) {
     return InitializeAppError(
       error,
       pendingId,
@@ -913,14 +964,17 @@ mixin _$InitializeApp {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result start(void Function(AppAction) result, String pendingId),
-    @required Result update(LatLng location, Location currentLocation, LocationWeather weatherData),
+    @required
+        Result update(LatLng location, Location currentLocation,
+            LocationWeather weatherData),
     @required Result successful(String pendingId),
     @required Result error(Object error, String pendingId),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result start(void Function(AppAction) result, String pendingId),
-    Result update(LatLng location, Location currentLocation, LocationWeather weatherData),
+    Result update(
+        LatLng location, Location currentLocation, LocationWeather weatherData),
     Result successful(String pendingId),
     Result error(Object error, String pendingId),
     @required Result orElse(),
@@ -943,11 +997,13 @@ mixin _$InitializeApp {
 }
 
 abstract class $InitializeAppCopyWith<$Res> {
-  factory $InitializeAppCopyWith(InitializeApp value, $Res Function(InitializeApp) then) =
+  factory $InitializeAppCopyWith(
+          InitializeApp value, $Res Function(InitializeApp) then) =
       _$InitializeAppCopyWithImpl<$Res>;
 }
 
-class _$InitializeAppCopyWithImpl<$Res> implements $InitializeAppCopyWith<$Res> {
+class _$InitializeAppCopyWithImpl<$Res>
+    implements $InitializeAppCopyWith<$Res> {
   _$InitializeAppCopyWithImpl(this._value, this._then);
 
   final InitializeApp _value;
@@ -956,14 +1012,17 @@ class _$InitializeAppCopyWithImpl<$Res> implements $InitializeAppCopyWith<$Res> 
 }
 
 abstract class $InitializeAppStartCopyWith<$Res> {
-  factory $InitializeAppStartCopyWith(InitializeAppStart value, $Res Function(InitializeAppStart) then) =
+  factory $InitializeAppStartCopyWith(
+          InitializeAppStart value, $Res Function(InitializeAppStart) then) =
       _$InitializeAppStartCopyWithImpl<$Res>;
   $Res call({void Function(AppAction) result, String pendingId});
 }
 
-class _$InitializeAppStartCopyWithImpl<$Res> extends _$InitializeAppCopyWithImpl<$Res>
+class _$InitializeAppStartCopyWithImpl<$Res>
+    extends _$InitializeAppCopyWithImpl<$Res>
     implements $InitializeAppStartCopyWith<$Res> {
-  _$InitializeAppStartCopyWithImpl(InitializeAppStart _value, $Res Function(InitializeAppStart) _then)
+  _$InitializeAppStartCopyWithImpl(
+      InitializeAppStart _value, $Res Function(InitializeAppStart) _then)
       : super(_value, (v) => _then(v as InitializeAppStart));
 
   @override
@@ -983,7 +1042,8 @@ class _$InitializeAppStartCopyWithImpl<$Res> extends _$InitializeAppCopyWithImpl
 
 @Implements(ActionStart)
 class _$InitializeAppStart implements InitializeAppStart {
-  const _$InitializeAppStart(this.result, {this.pendingId = _kInitializeAppPendingId})
+  const _$InitializeAppStart(this.result,
+      {this.pendingId = _kInitializeAppPendingId})
       : assert(result != null),
         assert(pendingId != null);
 
@@ -1002,9 +1062,11 @@ class _$InitializeAppStart implements InitializeAppStart {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is InitializeAppStart &&
-            (identical(other.result, result) || const DeepCollectionEquality().equals(other.result, result)) &&
+            (identical(other.result, result) ||
+                const DeepCollectionEquality().equals(other.result, result)) &&
             (identical(other.pendingId, pendingId) ||
-                const DeepCollectionEquality().equals(other.pendingId, pendingId)));
+                const DeepCollectionEquality()
+                    .equals(other.pendingId, pendingId)));
   }
 
   @override
@@ -1021,7 +1083,9 @@ class _$InitializeAppStart implements InitializeAppStart {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result start(void Function(AppAction) result, String pendingId),
-    @required Result update(LatLng location, Location currentLocation, LocationWeather weatherData),
+    @required
+        Result update(LatLng location, Location currentLocation,
+            LocationWeather weatherData),
     @required Result successful(String pendingId),
     @required Result error(Object error, String pendingId),
   }) {
@@ -1036,7 +1100,8 @@ class _$InitializeAppStart implements InitializeAppStart {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result start(void Function(AppAction) result, String pendingId),
-    Result update(LatLng location, Location currentLocation, LocationWeather weatherData),
+    Result update(
+        LatLng location, Location currentLocation, LocationWeather weatherData),
     Result successful(String pendingId),
     Result error(Object error, String pendingId),
     @required Result orElse(),
@@ -1081,7 +1146,8 @@ class _$InitializeAppStart implements InitializeAppStart {
 }
 
 abstract class InitializeAppStart implements InitializeApp, ActionStart {
-  const factory InitializeAppStart(void Function(AppAction) result, {String pendingId}) = _$InitializeAppStart;
+  const factory InitializeAppStart(void Function(AppAction) result,
+      {String pendingId}) = _$InitializeAppStart;
 
   void Function(AppAction) get result;
   String get pendingId;
@@ -1089,14 +1155,18 @@ abstract class InitializeAppStart implements InitializeApp, ActionStart {
 }
 
 abstract class $InitializeAppUpdateCopyWith<$Res> {
-  factory $InitializeAppUpdateCopyWith(InitializeAppUpdate value, $Res Function(InitializeAppUpdate) then) =
+  factory $InitializeAppUpdateCopyWith(
+          InitializeAppUpdate value, $Res Function(InitializeAppUpdate) then) =
       _$InitializeAppUpdateCopyWithImpl<$Res>;
-  $Res call({LatLng location, Location currentLocation, LocationWeather weatherData});
+  $Res call(
+      {LatLng location, Location currentLocation, LocationWeather weatherData});
 }
 
-class _$InitializeAppUpdateCopyWithImpl<$Res> extends _$InitializeAppCopyWithImpl<$Res>
+class _$InitializeAppUpdateCopyWithImpl<$Res>
+    extends _$InitializeAppCopyWithImpl<$Res>
     implements $InitializeAppUpdateCopyWith<$Res> {
-  _$InitializeAppUpdateCopyWithImpl(InitializeAppUpdate _value, $Res Function(InitializeAppUpdate) _then)
+  _$InitializeAppUpdateCopyWithImpl(
+      InitializeAppUpdate _value, $Res Function(InitializeAppUpdate) _then)
       : super(_value, (v) => _then(v as InitializeAppUpdate));
 
   @override
@@ -1110,14 +1180,19 @@ class _$InitializeAppUpdateCopyWithImpl<$Res> extends _$InitializeAppCopyWithImp
   }) {
     return _then(InitializeAppUpdate(
       location: location == freezed ? _value.location : location as LatLng,
-      currentLocation: currentLocation == freezed ? _value.currentLocation : currentLocation as Location,
-      weatherData: weatherData == freezed ? _value.weatherData : weatherData as LocationWeather,
+      currentLocation: currentLocation == freezed
+          ? _value.currentLocation
+          : currentLocation as Location,
+      weatherData: weatherData == freezed
+          ? _value.weatherData
+          : weatherData as LocationWeather,
     ));
   }
 }
 
 class _$InitializeAppUpdate implements InitializeAppUpdate {
-  const _$InitializeAppUpdate({this.location, this.currentLocation, this.weatherData});
+  const _$InitializeAppUpdate(
+      {this.location, this.currentLocation, this.weatherData});
 
   @override
   final LatLng location;
@@ -1135,11 +1210,15 @@ class _$InitializeAppUpdate implements InitializeAppUpdate {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is InitializeAppUpdate &&
-            (identical(other.location, location) || const DeepCollectionEquality().equals(other.location, location)) &&
+            (identical(other.location, location) ||
+                const DeepCollectionEquality()
+                    .equals(other.location, location)) &&
             (identical(other.currentLocation, currentLocation) ||
-                const DeepCollectionEquality().equals(other.currentLocation, currentLocation)) &&
+                const DeepCollectionEquality()
+                    .equals(other.currentLocation, currentLocation)) &&
             (identical(other.weatherData, weatherData) ||
-                const DeepCollectionEquality().equals(other.weatherData, weatherData)));
+                const DeepCollectionEquality()
+                    .equals(other.weatherData, weatherData)));
   }
 
   @override
@@ -1157,7 +1236,9 @@ class _$InitializeAppUpdate implements InitializeAppUpdate {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result start(void Function(AppAction) result, String pendingId),
-    @required Result update(LatLng location, Location currentLocation, LocationWeather weatherData),
+    @required
+        Result update(LatLng location, Location currentLocation,
+            LocationWeather weatherData),
     @required Result successful(String pendingId),
     @required Result error(Object error, String pendingId),
   }) {
@@ -1172,7 +1253,8 @@ class _$InitializeAppUpdate implements InitializeAppUpdate {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result start(void Function(AppAction) result, String pendingId),
-    Result update(LatLng location, Location currentLocation, LocationWeather weatherData),
+    Result update(
+        LatLng location, Location currentLocation, LocationWeather weatherData),
     Result successful(String pendingId),
     Result error(Object error, String pendingId),
     @required Result orElse(),
@@ -1217,8 +1299,10 @@ class _$InitializeAppUpdate implements InitializeAppUpdate {
 }
 
 abstract class InitializeAppUpdate implements InitializeApp {
-  const factory InitializeAppUpdate({LatLng location, Location currentLocation, LocationWeather weatherData}) =
-      _$InitializeAppUpdate;
+  const factory InitializeAppUpdate(
+      {LatLng location,
+      Location currentLocation,
+      LocationWeather weatherData}) = _$InitializeAppUpdate;
 
   LatLng get location;
   Location get currentLocation;
@@ -1227,14 +1311,17 @@ abstract class InitializeAppUpdate implements InitializeApp {
 }
 
 abstract class $InitializeAppSuccessfulCopyWith<$Res> {
-  factory $InitializeAppSuccessfulCopyWith(InitializeAppSuccessful value, $Res Function(InitializeAppSuccessful) then) =
+  factory $InitializeAppSuccessfulCopyWith(InitializeAppSuccessful value,
+          $Res Function(InitializeAppSuccessful) then) =
       _$InitializeAppSuccessfulCopyWithImpl<$Res>;
   $Res call({String pendingId});
 }
 
-class _$InitializeAppSuccessfulCopyWithImpl<$Res> extends _$InitializeAppCopyWithImpl<$Res>
+class _$InitializeAppSuccessfulCopyWithImpl<$Res>
+    extends _$InitializeAppCopyWithImpl<$Res>
     implements $InitializeAppSuccessfulCopyWith<$Res> {
-  _$InitializeAppSuccessfulCopyWithImpl(InitializeAppSuccessful _value, $Res Function(InitializeAppSuccessful) _then)
+  _$InitializeAppSuccessfulCopyWithImpl(InitializeAppSuccessful _value,
+      $Res Function(InitializeAppSuccessful) _then)
       : super(_value, (v) => _then(v as InitializeAppSuccessful));
 
   @override
@@ -1252,7 +1339,8 @@ class _$InitializeAppSuccessfulCopyWithImpl<$Res> extends _$InitializeAppCopyWit
 
 @Implements(ActionDone)
 class _$InitializeAppSuccessful implements InitializeAppSuccessful {
-  const _$InitializeAppSuccessful({this.pendingId = _kInitializeAppPendingId}) : assert(pendingId != null);
+  const _$InitializeAppSuccessful({this.pendingId = _kInitializeAppPendingId})
+      : assert(pendingId != null);
 
   @JsonKey(defaultValue: _kInitializeAppPendingId)
   @override
@@ -1268,21 +1356,26 @@ class _$InitializeAppSuccessful implements InitializeAppSuccessful {
     return identical(this, other) ||
         (other is InitializeAppSuccessful &&
             (identical(other.pendingId, pendingId) ||
-                const DeepCollectionEquality().equals(other.pendingId, pendingId)));
+                const DeepCollectionEquality()
+                    .equals(other.pendingId, pendingId)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode ^ const DeepCollectionEquality().hash(pendingId);
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(pendingId);
 
   @override
   $InitializeAppSuccessfulCopyWith<InitializeAppSuccessful> get copyWith =>
-      _$InitializeAppSuccessfulCopyWithImpl<InitializeAppSuccessful>(this, _$identity);
+      _$InitializeAppSuccessfulCopyWithImpl<InitializeAppSuccessful>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result start(void Function(AppAction) result, String pendingId),
-    @required Result update(LatLng location, Location currentLocation, LocationWeather weatherData),
+    @required
+        Result update(LatLng location, Location currentLocation,
+            LocationWeather weatherData),
     @required Result successful(String pendingId),
     @required Result error(Object error, String pendingId),
   }) {
@@ -1297,7 +1390,8 @@ class _$InitializeAppSuccessful implements InitializeAppSuccessful {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result start(void Function(AppAction) result, String pendingId),
-    Result update(LatLng location, Location currentLocation, LocationWeather weatherData),
+    Result update(
+        LatLng location, Location currentLocation, LocationWeather weatherData),
     Result successful(String pendingId),
     Result error(Object error, String pendingId),
     @required Result orElse(),
@@ -1342,21 +1436,25 @@ class _$InitializeAppSuccessful implements InitializeAppSuccessful {
 }
 
 abstract class InitializeAppSuccessful implements InitializeApp, ActionDone {
-  const factory InitializeAppSuccessful({String pendingId}) = _$InitializeAppSuccessful;
+  const factory InitializeAppSuccessful({String pendingId}) =
+      _$InitializeAppSuccessful;
 
   String get pendingId;
   $InitializeAppSuccessfulCopyWith<InitializeAppSuccessful> get copyWith;
 }
 
 abstract class $InitializeAppErrorCopyWith<$Res> {
-  factory $InitializeAppErrorCopyWith(InitializeAppError value, $Res Function(InitializeAppError) then) =
+  factory $InitializeAppErrorCopyWith(
+          InitializeAppError value, $Res Function(InitializeAppError) then) =
       _$InitializeAppErrorCopyWithImpl<$Res>;
   $Res call({Object error, String pendingId});
 }
 
-class _$InitializeAppErrorCopyWithImpl<$Res> extends _$InitializeAppCopyWithImpl<$Res>
+class _$InitializeAppErrorCopyWithImpl<$Res>
+    extends _$InitializeAppCopyWithImpl<$Res>
     implements $InitializeAppErrorCopyWith<$Res> {
-  _$InitializeAppErrorCopyWithImpl(InitializeAppError _value, $Res Function(InitializeAppError) _then)
+  _$InitializeAppErrorCopyWithImpl(
+      InitializeAppError _value, $Res Function(InitializeAppError) _then)
       : super(_value, (v) => _then(v as InitializeAppError));
 
   @override
@@ -1377,7 +1475,8 @@ class _$InitializeAppErrorCopyWithImpl<$Res> extends _$InitializeAppCopyWithImpl
 @Implements(ActionDone)
 @Implements(ErrorAction)
 class _$InitializeAppError implements InitializeAppError {
-  const _$InitializeAppError(this.error, [this.pendingId = _kInitializeAppPendingId])
+  const _$InitializeAppError(this.error,
+      [this.pendingId = _kInitializeAppPendingId])
       : assert(error != null),
         assert(pendingId != null);
 
@@ -1396,9 +1495,11 @@ class _$InitializeAppError implements InitializeAppError {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is InitializeAppError &&
-            (identical(other.error, error) || const DeepCollectionEquality().equals(other.error, error)) &&
+            (identical(other.error, error) ||
+                const DeepCollectionEquality().equals(other.error, error)) &&
             (identical(other.pendingId, pendingId) ||
-                const DeepCollectionEquality().equals(other.pendingId, pendingId)));
+                const DeepCollectionEquality()
+                    .equals(other.pendingId, pendingId)));
   }
 
   @override
@@ -1415,7 +1516,9 @@ class _$InitializeAppError implements InitializeAppError {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result start(void Function(AppAction) result, String pendingId),
-    @required Result update(LatLng location, Location currentLocation, LocationWeather weatherData),
+    @required
+        Result update(LatLng location, Location currentLocation,
+            LocationWeather weatherData),
     @required Result successful(String pendingId),
     @required Result error(Object error, String pendingId),
   }) {
@@ -1430,7 +1533,8 @@ class _$InitializeAppError implements InitializeAppError {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result start(void Function(AppAction) result, String pendingId),
-    Result update(LatLng location, Location currentLocation, LocationWeather weatherData),
+    Result update(
+        LatLng location, Location currentLocation, LocationWeather weatherData),
     Result successful(String pendingId),
     Result error(Object error, String pendingId),
     @required Result orElse(),
@@ -1474,8 +1578,10 @@ class _$InitializeAppError implements InitializeAppError {
   }
 }
 
-abstract class InitializeAppError implements InitializeApp, ActionDone, ErrorAction {
-  const factory InitializeAppError(Object error, [String pendingId]) = _$InitializeAppError;
+abstract class InitializeAppError
+    implements InitializeApp, ActionDone, ErrorAction {
+  const factory InitializeAppError(Object error, [String pendingId]) =
+      _$InitializeAppError;
 
   Object get error;
   String get pendingId;
@@ -1486,7 +1592,8 @@ class _$SearchLocationTearOff {
   const _$SearchLocationTearOff();
 
 // ignore: unused_element
-  SearchLocationQuery query(String query, {String pendingId = _kSearchLocationPendingId}) {
+  SearchLocationQuery query(String query,
+      {String pendingId = _kSearchLocationPendingId}) {
     return SearchLocationQuery(
       query,
       pendingId: pendingId,
@@ -1494,7 +1601,8 @@ class _$SearchLocationTearOff {
   }
 
 // ignore: unused_element
-  SearchLocationSuccessful successful(List<Location> locations, [String pendingId = _kSearchLocationPendingId]) {
+  SearchLocationSuccessful successful(List<Location> locations,
+      [String pendingId = _kSearchLocationPendingId]) {
     return SearchLocationSuccessful(
       locations,
       pendingId,
@@ -1502,7 +1610,8 @@ class _$SearchLocationTearOff {
   }
 
 // ignore: unused_element
-  SearchLocationError error(Object error, [String pendingId = _kSearchLocationPendingId]) {
+  SearchLocationError error(Object error,
+      [String pendingId = _kSearchLocationPendingId]) {
     return SearchLocationError(
       error,
       pendingId,
@@ -1547,12 +1656,14 @@ mixin _$SearchLocation {
 }
 
 abstract class $SearchLocationCopyWith<$Res> {
-  factory $SearchLocationCopyWith(SearchLocation value, $Res Function(SearchLocation) then) =
+  factory $SearchLocationCopyWith(
+          SearchLocation value, $Res Function(SearchLocation) then) =
       _$SearchLocationCopyWithImpl<$Res>;
   $Res call({String pendingId});
 }
 
-class _$SearchLocationCopyWithImpl<$Res> implements $SearchLocationCopyWith<$Res> {
+class _$SearchLocationCopyWithImpl<$Res>
+    implements $SearchLocationCopyWith<$Res> {
   _$SearchLocationCopyWithImpl(this._value, this._then);
 
   final SearchLocation _value;
@@ -1569,16 +1680,20 @@ class _$SearchLocationCopyWithImpl<$Res> implements $SearchLocationCopyWith<$Res
   }
 }
 
-abstract class $SearchLocationQueryCopyWith<$Res> implements $SearchLocationCopyWith<$Res> {
-  factory $SearchLocationQueryCopyWith(SearchLocationQuery value, $Res Function(SearchLocationQuery) then) =
+abstract class $SearchLocationQueryCopyWith<$Res>
+    implements $SearchLocationCopyWith<$Res> {
+  factory $SearchLocationQueryCopyWith(
+          SearchLocationQuery value, $Res Function(SearchLocationQuery) then) =
       _$SearchLocationQueryCopyWithImpl<$Res>;
   @override
   $Res call({String query, String pendingId});
 }
 
-class _$SearchLocationQueryCopyWithImpl<$Res> extends _$SearchLocationCopyWithImpl<$Res>
+class _$SearchLocationQueryCopyWithImpl<$Res>
+    extends _$SearchLocationCopyWithImpl<$Res>
     implements $SearchLocationQueryCopyWith<$Res> {
-  _$SearchLocationQueryCopyWithImpl(SearchLocationQuery _value, $Res Function(SearchLocationQuery) _then)
+  _$SearchLocationQueryCopyWithImpl(
+      SearchLocationQuery _value, $Res Function(SearchLocationQuery) _then)
       : super(_value, (v) => _then(v as SearchLocationQuery));
 
   @override
@@ -1598,7 +1713,8 @@ class _$SearchLocationQueryCopyWithImpl<$Res> extends _$SearchLocationCopyWithIm
 
 @Implements(ActionStart)
 class _$SearchLocationQuery implements SearchLocationQuery {
-  const _$SearchLocationQuery(this.query, {this.pendingId = _kSearchLocationPendingId})
+  const _$SearchLocationQuery(this.query,
+      {this.pendingId = _kSearchLocationPendingId})
       : assert(query != null),
         assert(pendingId != null);
 
@@ -1617,9 +1733,11 @@ class _$SearchLocationQuery implements SearchLocationQuery {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is SearchLocationQuery &&
-            (identical(other.query, query) || const DeepCollectionEquality().equals(other.query, query)) &&
+            (identical(other.query, query) ||
+                const DeepCollectionEquality().equals(other.query, query)) &&
             (identical(other.pendingId, pendingId) ||
-                const DeepCollectionEquality().equals(other.pendingId, pendingId)));
+                const DeepCollectionEquality()
+                    .equals(other.pendingId, pendingId)));
   }
 
   @override
@@ -1690,7 +1808,8 @@ class _$SearchLocationQuery implements SearchLocationQuery {
 }
 
 abstract class SearchLocationQuery implements SearchLocation, ActionStart {
-  const factory SearchLocationQuery(String query, {String pendingId}) = _$SearchLocationQuery;
+  const factory SearchLocationQuery(String query, {String pendingId}) =
+      _$SearchLocationQuery;
 
   String get query;
   @override
@@ -1699,21 +1818,25 @@ abstract class SearchLocationQuery implements SearchLocation, ActionStart {
   $SearchLocationQueryCopyWith<SearchLocationQuery> get copyWith;
 }
 
-abstract class $SearchLocationSuccessfulCopyWith<$Res> implements $SearchLocationCopyWith<$Res> {
-  factory $SearchLocationSuccessfulCopyWith(
-          SearchLocationSuccessful value, $Res Function(SearchLocationSuccessful) then) =
+abstract class $SearchLocationSuccessfulCopyWith<$Res>
+    implements $SearchLocationCopyWith<$Res> {
+  factory $SearchLocationSuccessfulCopyWith(SearchLocationSuccessful value,
+          $Res Function(SearchLocationSuccessful) then) =
       _$SearchLocationSuccessfulCopyWithImpl<$Res>;
   @override
   $Res call({List<Location> locations, String pendingId});
 }
 
-class _$SearchLocationSuccessfulCopyWithImpl<$Res> extends _$SearchLocationCopyWithImpl<$Res>
+class _$SearchLocationSuccessfulCopyWithImpl<$Res>
+    extends _$SearchLocationCopyWithImpl<$Res>
     implements $SearchLocationSuccessfulCopyWith<$Res> {
-  _$SearchLocationSuccessfulCopyWithImpl(SearchLocationSuccessful _value, $Res Function(SearchLocationSuccessful) _then)
+  _$SearchLocationSuccessfulCopyWithImpl(SearchLocationSuccessful _value,
+      $Res Function(SearchLocationSuccessful) _then)
       : super(_value, (v) => _then(v as SearchLocationSuccessful));
 
   @override
-  SearchLocationSuccessful get _value => super._value as SearchLocationSuccessful;
+  SearchLocationSuccessful get _value =>
+      super._value as SearchLocationSuccessful;
 
   @override
   $Res call({
@@ -1729,7 +1852,8 @@ class _$SearchLocationSuccessfulCopyWithImpl<$Res> extends _$SearchLocationCopyW
 
 @Implements(ActionDone)
 class _$SearchLocationSuccessful implements SearchLocationSuccessful {
-  const _$SearchLocationSuccessful(this.locations, [this.pendingId = _kSearchLocationPendingId])
+  const _$SearchLocationSuccessful(this.locations,
+      [this.pendingId = _kSearchLocationPendingId])
       : assert(locations != null),
         assert(pendingId != null);
 
@@ -1749,9 +1873,11 @@ class _$SearchLocationSuccessful implements SearchLocationSuccessful {
     return identical(this, other) ||
         (other is SearchLocationSuccessful &&
             (identical(other.locations, locations) ||
-                const DeepCollectionEquality().equals(other.locations, locations)) &&
+                const DeepCollectionEquality()
+                    .equals(other.locations, locations)) &&
             (identical(other.pendingId, pendingId) ||
-                const DeepCollectionEquality().equals(other.pendingId, pendingId)));
+                const DeepCollectionEquality()
+                    .equals(other.pendingId, pendingId)));
   }
 
   @override
@@ -1762,7 +1888,8 @@ class _$SearchLocationSuccessful implements SearchLocationSuccessful {
 
   @override
   $SearchLocationSuccessfulCopyWith<SearchLocationSuccessful> get copyWith =>
-      _$SearchLocationSuccessfulCopyWithImpl<SearchLocationSuccessful>(this, _$identity);
+      _$SearchLocationSuccessfulCopyWithImpl<SearchLocationSuccessful>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1822,7 +1949,8 @@ class _$SearchLocationSuccessful implements SearchLocationSuccessful {
 }
 
 abstract class SearchLocationSuccessful implements SearchLocation, ActionDone {
-  const factory SearchLocationSuccessful(List<Location> locations, [String pendingId]) = _$SearchLocationSuccessful;
+  const factory SearchLocationSuccessful(List<Location> locations,
+      [String pendingId]) = _$SearchLocationSuccessful;
 
   List<Location> get locations;
   @override
@@ -1831,16 +1959,20 @@ abstract class SearchLocationSuccessful implements SearchLocation, ActionDone {
   $SearchLocationSuccessfulCopyWith<SearchLocationSuccessful> get copyWith;
 }
 
-abstract class $SearchLocationErrorCopyWith<$Res> implements $SearchLocationCopyWith<$Res> {
-  factory $SearchLocationErrorCopyWith(SearchLocationError value, $Res Function(SearchLocationError) then) =
+abstract class $SearchLocationErrorCopyWith<$Res>
+    implements $SearchLocationCopyWith<$Res> {
+  factory $SearchLocationErrorCopyWith(
+          SearchLocationError value, $Res Function(SearchLocationError) then) =
       _$SearchLocationErrorCopyWithImpl<$Res>;
   @override
   $Res call({Object error, String pendingId});
 }
 
-class _$SearchLocationErrorCopyWithImpl<$Res> extends _$SearchLocationCopyWithImpl<$Res>
+class _$SearchLocationErrorCopyWithImpl<$Res>
+    extends _$SearchLocationCopyWithImpl<$Res>
     implements $SearchLocationErrorCopyWith<$Res> {
-  _$SearchLocationErrorCopyWithImpl(SearchLocationError _value, $Res Function(SearchLocationError) _then)
+  _$SearchLocationErrorCopyWithImpl(
+      SearchLocationError _value, $Res Function(SearchLocationError) _then)
       : super(_value, (v) => _then(v as SearchLocationError));
 
   @override
@@ -1861,7 +1993,8 @@ class _$SearchLocationErrorCopyWithImpl<$Res> extends _$SearchLocationCopyWithIm
 @Implements(ActionDone)
 @Implements(ErrorAction)
 class _$SearchLocationError implements SearchLocationError {
-  const _$SearchLocationError(this.error, [this.pendingId = _kSearchLocationPendingId])
+  const _$SearchLocationError(this.error,
+      [this.pendingId = _kSearchLocationPendingId])
       : assert(error != null),
         assert(pendingId != null);
 
@@ -1880,9 +2013,11 @@ class _$SearchLocationError implements SearchLocationError {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is SearchLocationError &&
-            (identical(other.error, error) || const DeepCollectionEquality().equals(other.error, error)) &&
+            (identical(other.error, error) ||
+                const DeepCollectionEquality().equals(other.error, error)) &&
             (identical(other.pendingId, pendingId) ||
-                const DeepCollectionEquality().equals(other.pendingId, pendingId)));
+                const DeepCollectionEquality()
+                    .equals(other.pendingId, pendingId)));
   }
 
   @override
@@ -1952,8 +2087,10 @@ class _$SearchLocationError implements SearchLocationError {
   }
 }
 
-abstract class SearchLocationError implements SearchLocation, ActionDone, ErrorAction {
-  const factory SearchLocationError(Object error, [String pendingId]) = _$SearchLocationError;
+abstract class SearchLocationError
+    implements SearchLocation, ActionDone, ErrorAction {
+  const factory SearchLocationError(Object error, [String pendingId]) =
+      _$SearchLocationError;
 
   Object get error;
   @override
@@ -1983,12 +2120,14 @@ mixin _$SetSelectedLocation {
 }
 
 abstract class $SetSelectedLocationCopyWith<$Res> {
-  factory $SetSelectedLocationCopyWith(SetSelectedLocation value, $Res Function(SetSelectedLocation) then) =
+  factory $SetSelectedLocationCopyWith(
+          SetSelectedLocation value, $Res Function(SetSelectedLocation) then) =
       _$SetSelectedLocationCopyWithImpl<$Res>;
   $Res call({Location location});
 }
 
-class _$SetSelectedLocationCopyWithImpl<$Res> implements $SetSelectedLocationCopyWith<$Res> {
+class _$SetSelectedLocationCopyWithImpl<$Res>
+    implements $SetSelectedLocationCopyWith<$Res> {
   _$SetSelectedLocationCopyWithImpl(this._value, this._then);
 
   final SetSelectedLocation _value;
@@ -2005,16 +2144,20 @@ class _$SetSelectedLocationCopyWithImpl<$Res> implements $SetSelectedLocationCop
   }
 }
 
-abstract class $SetSelectedLocation$CopyWith<$Res> implements $SetSelectedLocationCopyWith<$Res> {
-  factory $SetSelectedLocation$CopyWith(SetSelectedLocation$ value, $Res Function(SetSelectedLocation$) then) =
+abstract class $SetSelectedLocation$CopyWith<$Res>
+    implements $SetSelectedLocationCopyWith<$Res> {
+  factory $SetSelectedLocation$CopyWith(SetSelectedLocation$ value,
+          $Res Function(SetSelectedLocation$) then) =
       _$SetSelectedLocation$CopyWithImpl<$Res>;
   @override
   $Res call({Location location});
 }
 
-class _$SetSelectedLocation$CopyWithImpl<$Res> extends _$SetSelectedLocationCopyWithImpl<$Res>
+class _$SetSelectedLocation$CopyWithImpl<$Res>
+    extends _$SetSelectedLocationCopyWithImpl<$Res>
     implements $SetSelectedLocation$CopyWith<$Res> {
-  _$SetSelectedLocation$CopyWithImpl(SetSelectedLocation$ _value, $Res Function(SetSelectedLocation$) _then)
+  _$SetSelectedLocation$CopyWithImpl(
+      SetSelectedLocation$ _value, $Res Function(SetSelectedLocation$) _then)
       : super(_value, (v) => _then(v as SetSelectedLocation$));
 
   @override
@@ -2045,19 +2188,24 @@ class _$SetSelectedLocation$ implements SetSelectedLocation$ {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is SetSelectedLocation$ &&
-            (identical(other.location, location) || const DeepCollectionEquality().equals(other.location, location)));
+            (identical(other.location, location) ||
+                const DeepCollectionEquality()
+                    .equals(other.location, location)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode ^ const DeepCollectionEquality().hash(location);
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(location);
 
   @override
   $SetSelectedLocation$CopyWith<SetSelectedLocation$> get copyWith =>
-      _$SetSelectedLocation$CopyWithImpl<SetSelectedLocation$>(this, _$identity);
+      _$SetSelectedLocation$CopyWithImpl<SetSelectedLocation$>(
+          this, _$identity);
 }
 
 abstract class SetSelectedLocation$ implements SetSelectedLocation {
-  const factory SetSelectedLocation$(Location location) = _$SetSelectedLocation$;
+  const factory SetSelectedLocation$(Location location) =
+      _$SetSelectedLocation$;
 
   @override
   Location get location;
@@ -2086,12 +2234,14 @@ mixin _$SetSelectedLocationId {
 }
 
 abstract class $SetSelectedLocationIdCopyWith<$Res> {
-  factory $SetSelectedLocationIdCopyWith(SetSelectedLocationId value, $Res Function(SetSelectedLocationId) then) =
+  factory $SetSelectedLocationIdCopyWith(SetSelectedLocationId value,
+          $Res Function(SetSelectedLocationId) then) =
       _$SetSelectedLocationIdCopyWithImpl<$Res>;
   $Res call({int locationId});
 }
 
-class _$SetSelectedLocationIdCopyWithImpl<$Res> implements $SetSelectedLocationIdCopyWith<$Res> {
+class _$SetSelectedLocationIdCopyWithImpl<$Res>
+    implements $SetSelectedLocationIdCopyWith<$Res> {
   _$SetSelectedLocationIdCopyWithImpl(this._value, this._then);
 
   final SetSelectedLocationId _value;
@@ -2108,16 +2258,20 @@ class _$SetSelectedLocationIdCopyWithImpl<$Res> implements $SetSelectedLocationI
   }
 }
 
-abstract class $SetSelectedLocationId$CopyWith<$Res> implements $SetSelectedLocationIdCopyWith<$Res> {
-  factory $SetSelectedLocationId$CopyWith(SetSelectedLocationId$ value, $Res Function(SetSelectedLocationId$) then) =
+abstract class $SetSelectedLocationId$CopyWith<$Res>
+    implements $SetSelectedLocationIdCopyWith<$Res> {
+  factory $SetSelectedLocationId$CopyWith(SetSelectedLocationId$ value,
+          $Res Function(SetSelectedLocationId$) then) =
       _$SetSelectedLocationId$CopyWithImpl<$Res>;
   @override
   $Res call({int locationId});
 }
 
-class _$SetSelectedLocationId$CopyWithImpl<$Res> extends _$SetSelectedLocationIdCopyWithImpl<$Res>
+class _$SetSelectedLocationId$CopyWithImpl<$Res>
+    extends _$SetSelectedLocationIdCopyWithImpl<$Res>
     implements $SetSelectedLocationId$CopyWith<$Res> {
-  _$SetSelectedLocationId$CopyWithImpl(SetSelectedLocationId$ _value, $Res Function(SetSelectedLocationId$) _then)
+  _$SetSelectedLocationId$CopyWithImpl(SetSelectedLocationId$ _value,
+      $Res Function(SetSelectedLocationId$) _then)
       : super(_value, (v) => _then(v as SetSelectedLocationId$));
 
   @override
@@ -2149,19 +2303,23 @@ class _$SetSelectedLocationId$ implements SetSelectedLocationId$ {
     return identical(this, other) ||
         (other is SetSelectedLocationId$ &&
             (identical(other.locationId, locationId) ||
-                const DeepCollectionEquality().equals(other.locationId, locationId)));
+                const DeepCollectionEquality()
+                    .equals(other.locationId, locationId)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode ^ const DeepCollectionEquality().hash(locationId);
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(locationId);
 
   @override
   $SetSelectedLocationId$CopyWith<SetSelectedLocationId$> get copyWith =>
-      _$SetSelectedLocationId$CopyWithImpl<SetSelectedLocationId$>(this, _$identity);
+      _$SetSelectedLocationId$CopyWithImpl<SetSelectedLocationId$>(
+          this, _$identity);
 }
 
 abstract class SetSelectedLocationId$ implements SetSelectedLocationId {
-  const factory SetSelectedLocationId$(int locationId) = _$SetSelectedLocationId$;
+  const factory SetSelectedLocationId$(int locationId) =
+      _$SetSelectedLocationId$;
 
   @override
   int get locationId;
@@ -2190,12 +2348,14 @@ mixin _$SetMeasurementUnit {
 }
 
 abstract class $SetMeasurementUnitCopyWith<$Res> {
-  factory $SetMeasurementUnitCopyWith(SetMeasurementUnit value, $Res Function(SetMeasurementUnit) then) =
+  factory $SetMeasurementUnitCopyWith(
+          SetMeasurementUnit value, $Res Function(SetMeasurementUnit) then) =
       _$SetMeasurementUnitCopyWithImpl<$Res>;
   $Res call({MeasurementUnit unit});
 }
 
-class _$SetMeasurementUnitCopyWithImpl<$Res> implements $SetMeasurementUnitCopyWith<$Res> {
+class _$SetMeasurementUnitCopyWithImpl<$Res>
+    implements $SetMeasurementUnitCopyWith<$Res> {
   _$SetMeasurementUnitCopyWithImpl(this._value, this._then);
 
   final SetMeasurementUnit _value;
@@ -2212,16 +2372,20 @@ class _$SetMeasurementUnitCopyWithImpl<$Res> implements $SetMeasurementUnitCopyW
   }
 }
 
-abstract class $SetMeasurementUnit$CopyWith<$Res> implements $SetMeasurementUnitCopyWith<$Res> {
-  factory $SetMeasurementUnit$CopyWith(SetMeasurementUnit$ value, $Res Function(SetMeasurementUnit$) then) =
+abstract class $SetMeasurementUnit$CopyWith<$Res>
+    implements $SetMeasurementUnitCopyWith<$Res> {
+  factory $SetMeasurementUnit$CopyWith(
+          SetMeasurementUnit$ value, $Res Function(SetMeasurementUnit$) then) =
       _$SetMeasurementUnit$CopyWithImpl<$Res>;
   @override
   $Res call({MeasurementUnit unit});
 }
 
-class _$SetMeasurementUnit$CopyWithImpl<$Res> extends _$SetMeasurementUnitCopyWithImpl<$Res>
+class _$SetMeasurementUnit$CopyWithImpl<$Res>
+    extends _$SetMeasurementUnitCopyWithImpl<$Res>
     implements $SetMeasurementUnit$CopyWith<$Res> {
-  _$SetMeasurementUnit$CopyWithImpl(SetMeasurementUnit$ _value, $Res Function(SetMeasurementUnit$) _then)
+  _$SetMeasurementUnit$CopyWithImpl(
+      SetMeasurementUnit$ _value, $Res Function(SetMeasurementUnit$) _then)
       : super(_value, (v) => _then(v as SetMeasurementUnit$));
 
   @override
@@ -2252,11 +2416,13 @@ class _$SetMeasurementUnit$ implements SetMeasurementUnit$ {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is SetMeasurementUnit$ &&
-            (identical(other.unit, unit) || const DeepCollectionEquality().equals(other.unit, unit)));
+            (identical(other.unit, unit) ||
+                const DeepCollectionEquality().equals(other.unit, unit)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode ^ const DeepCollectionEquality().hash(unit);
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(unit);
 
   @override
   $SetMeasurementUnit$CopyWith<SetMeasurementUnit$> get copyWith =>
@@ -2264,7 +2430,8 @@ class _$SetMeasurementUnit$ implements SetMeasurementUnit$ {
 }
 
 abstract class SetMeasurementUnit$ implements SetMeasurementUnit {
-  const factory SetMeasurementUnit$(MeasurementUnit unit) = _$SetMeasurementUnit$;
+  const factory SetMeasurementUnit$(MeasurementUnit unit) =
+      _$SetMeasurementUnit$;
 
   @override
   MeasurementUnit get unit;

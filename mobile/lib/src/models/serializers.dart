@@ -15,6 +15,7 @@ part 'serializers.g.dart';
 
 @SerializersFor(<Type>[
   LatLng,
+  Location,
   LocationWeather,
 ])
 Serializers serializers = (_$serializers.toBuilder() //

@@ -4,19 +4,12 @@
 
 library data;
 
-import 'package:chopper/chopper.dart';
+import 'dart:convert';
+
+import 'package:http/http.dart';
 import 'package:meta/meta.dart';
-import 'package:very_good_weather/src/data/services/index.dart';
 import 'package:very_good_weather/src/models/index.dart';
 
 part 'location_api.dart';
 part 'meta_weather_api.dart';
 part 'util.dart';
-
-T resultOrThrow<T>(Response<T> response) {
-  if (response.isSuccessful) {
-    return response.body;
-  } else {
-    throw StateError('${response.error}');
-  }
-}

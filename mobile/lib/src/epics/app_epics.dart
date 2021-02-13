@@ -33,9 +33,8 @@ class AppEpics {
 
   Stream<AppAction> _initializeAppStart(Stream<InitializeAppStart> actions, EpicStore<AppState> store) {
     return actions //
-        .flatMap((InitializeAppStart action) => _locationApi
-            .getLocation()
-            .asStream()
+        .flatMap((InitializeAppStart action) => Stream<void>.value(null)
+            .asyncMap((_) => _locationApi.getLocation())
             .flatMap((LatLng location) async* {
               yield InitializeApp.update(location: location);
 

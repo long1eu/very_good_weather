@@ -5,14 +5,14 @@
 part of data;
 
 class LocationApi {
-  const LocationApi({@required LocationService service})
-      : assert(service != null),
-        _service = service;
+  const LocationApi({@required Client client})
+      : assert(client != null),
+        _client = client;
 
-  final LocationService _service;
+  final Client _client;
 
   Future<LatLng> getLocation() async {
-    final Response<LatLng> response = await _service.getLocation();
-    return resultOrThrow(response);
+    final Response response = await _client.get('http://ip-api.com/json?fields=16592');
+    return LatLng.fromJson(jsonDecode(response.body));
   }
 }

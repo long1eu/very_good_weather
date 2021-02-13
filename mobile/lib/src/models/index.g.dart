@@ -20,15 +20,18 @@ MeasurementUnit _$valueOf(String name) {
   }
 }
 
-final BuiltSet<MeasurementUnit> _$values = new BuiltSet<MeasurementUnit>(const <MeasurementUnit>[
+final BuiltSet<MeasurementUnit> _$values =
+    new BuiltSet<MeasurementUnit>(const <MeasurementUnit>[
   _$metric,
   _$imperial,
 ]);
 
 Serializer<LatLng> _$latLngSerializer = new _$LatLngSerializer();
 Serializer<Location> _$locationSerializer = new _$LocationSerializer();
-Serializer<LocationWeather> _$locationWeatherSerializer = new _$LocationWeatherSerializer();
-Serializer<WeatherPoint> _$weatherPointSerializer = new _$WeatherPointSerializer();
+Serializer<LocationWeather> _$locationWeatherSerializer =
+    new _$LocationWeatherSerializer();
+Serializer<WeatherPoint> _$weatherPointSerializer =
+    new _$WeatherPointSerializer();
 
 class _$LatLngSerializer implements StructuredSerializer<LatLng> {
   @override
@@ -37,7 +40,8 @@ class _$LatLngSerializer implements StructuredSerializer<LatLng> {
   final String wireName = 'LatLng';
 
   @override
-  Iterable<Object> serialize(Serializers serializers, LatLng object, {FullType specifiedType = FullType.unspecified}) {
+  Iterable<Object> serialize(Serializers serializers, LatLng object,
+      {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[
       'lat',
       serializers.serialize(object.lat, specifiedType: const FullType(double)),
@@ -62,13 +66,16 @@ class _$LatLngSerializer implements StructuredSerializer<LatLng> {
       final dynamic value = iterator.current;
       switch (key) {
         case 'lat':
-          result.lat = serializers.deserialize(value, specifiedType: const FullType(double)) as double;
+          result.lat = serializers.deserialize(value,
+              specifiedType: const FullType(double)) as double;
           break;
         case 'lon':
-          result.lon = serializers.deserialize(value, specifiedType: const FullType(double)) as double;
+          result.lon = serializers.deserialize(value,
+              specifiedType: const FullType(double)) as double;
           break;
         case 'city':
-          result.city = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
+          result.city = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
           break;
       }
     }
@@ -90,9 +97,11 @@ class _$LocationSerializer implements StructuredSerializer<Location> {
       'woeid',
       serializers.serialize(object.id, specifiedType: const FullType(int)),
       'title',
-      serializers.serialize(object.title, specifiedType: const FullType(String)),
+      serializers.serialize(object.title,
+          specifiedType: const FullType(String)),
       'location_type',
-      serializers.serialize(object.locationType, specifiedType: const FullType(String)),
+      serializers.serialize(object.locationType,
+          specifiedType: const FullType(String)),
     ];
 
     return result;
@@ -110,13 +119,16 @@ class _$LocationSerializer implements StructuredSerializer<Location> {
       final dynamic value = iterator.current;
       switch (key) {
         case 'woeid':
-          result.id = serializers.deserialize(value, specifiedType: const FullType(int)) as int;
+          result.id = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
           break;
         case 'title':
-          result.title = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
+          result.title = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
           break;
         case 'location_type':
-          result.locationType = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
+          result.locationType = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
           break;
       }
     }
@@ -125,7 +137,8 @@ class _$LocationSerializer implements StructuredSerializer<Location> {
   }
 }
 
-class _$LocationWeatherSerializer implements StructuredSerializer<LocationWeather> {
+class _$LocationWeatherSerializer
+    implements StructuredSerializer<LocationWeather> {
   @override
   final Iterable<Type> types = const [LocationWeather, _$LocationWeather];
   @override
@@ -139,18 +152,22 @@ class _$LocationWeatherSerializer implements StructuredSerializer<LocationWeathe
       serializers.serialize(object.id, specifiedType: const FullType(int)),
       'consolidated_weather',
       serializers.serialize(object.weather,
-          specifiedType: const FullType(BuiltList, const [const FullType(WeatherPoint)])),
+          specifiedType:
+              const FullType(BuiltList, const [const FullType(WeatherPoint)])),
       'sun_rise',
-      serializers.serialize(object.sunRise, specifiedType: const FullType(DateTime)),
+      serializers.serialize(object.sunRise,
+          specifiedType: const FullType(DateTime)),
       'sun_set',
-      serializers.serialize(object.sunSet, specifiedType: const FullType(DateTime)),
+      serializers.serialize(object.sunSet,
+          specifiedType: const FullType(DateTime)),
     ];
 
     return result;
   }
 
   @override
-  LocationWeather deserialize(Serializers serializers, Iterable<Object> serialized,
+  LocationWeather deserialize(
+      Serializers serializers, Iterable<Object> serialized,
       {FullType specifiedType = FullType.unspecified}) {
     final result = new LocationWeatherBuilder();
 
@@ -161,17 +178,22 @@ class _$LocationWeatherSerializer implements StructuredSerializer<LocationWeathe
       final dynamic value = iterator.current;
       switch (key) {
         case 'woeid':
-          result.id = serializers.deserialize(value, specifiedType: const FullType(int)) as int;
+          result.id = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
           break;
         case 'consolidated_weather':
           result.weather.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [const FullType(WeatherPoint)])) as BuiltList<Object>);
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(WeatherPoint)]))
+              as BuiltList<Object>);
           break;
         case 'sun_rise':
-          result.sunRise = serializers.deserialize(value, specifiedType: const FullType(DateTime)) as DateTime;
+          result.sunRise = serializers.deserialize(value,
+              specifiedType: const FullType(DateTime)) as DateTime;
           break;
         case 'sun_set':
-          result.sunSet = serializers.deserialize(value, specifiedType: const FullType(DateTime)) as DateTime;
+          result.sunSet = serializers.deserialize(value,
+              specifiedType: const FullType(DateTime)) as DateTime;
           break;
       }
     }
@@ -193,21 +215,29 @@ class _$WeatherPointSerializer implements StructuredSerializer<WeatherPoint> {
       'id',
       serializers.serialize(object.id, specifiedType: const FullType(int)),
       'weather_state_name',
-      serializers.serialize(object.weatherStateName, specifiedType: const FullType(String)),
+      serializers.serialize(object.weatherStateName,
+          specifiedType: const FullType(String)),
       'weather_state_abbr',
-      serializers.serialize(object.weatherStateAbbr, specifiedType: const FullType(String)),
+      serializers.serialize(object.weatherStateAbbr,
+          specifiedType: const FullType(String)),
       'applicable_date',
-      serializers.serialize(object.applicableDate, specifiedType: const FullType(DateTime)),
+      serializers.serialize(object.applicableDate,
+          specifiedType: const FullType(DateTime)),
       'min_temp',
-      serializers.serialize(object.minTemp, specifiedType: const FullType(double)),
+      serializers.serialize(object.minTemp,
+          specifiedType: const FullType(double)),
       'max_temp',
-      serializers.serialize(object.maxTemp, specifiedType: const FullType(double)),
+      serializers.serialize(object.maxTemp,
+          specifiedType: const FullType(double)),
       'the_temp',
-      serializers.serialize(object.theTemp, specifiedType: const FullType(double)),
+      serializers.serialize(object.theTemp,
+          specifiedType: const FullType(double)),
       'humidity',
-      serializers.serialize(object.humidity, specifiedType: const FullType(int)),
+      serializers.serialize(object.humidity,
+          specifiedType: const FullType(int)),
       'visibility',
-      serializers.serialize(object.visibility, specifiedType: const FullType(double)),
+      serializers.serialize(object.visibility,
+          specifiedType: const FullType(double)),
     ];
 
     return result;
@@ -225,31 +255,40 @@ class _$WeatherPointSerializer implements StructuredSerializer<WeatherPoint> {
       final dynamic value = iterator.current;
       switch (key) {
         case 'id':
-          result.id = serializers.deserialize(value, specifiedType: const FullType(int)) as int;
+          result.id = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
           break;
         case 'weather_state_name':
-          result.weatherStateName = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
+          result.weatherStateName = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
           break;
         case 'weather_state_abbr':
-          result.weatherStateAbbr = serializers.deserialize(value, specifiedType: const FullType(String)) as String;
+          result.weatherStateAbbr = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
           break;
         case 'applicable_date':
-          result.applicableDate = serializers.deserialize(value, specifiedType: const FullType(DateTime)) as DateTime;
+          result.applicableDate = serializers.deserialize(value,
+              specifiedType: const FullType(DateTime)) as DateTime;
           break;
         case 'min_temp':
-          result.minTemp = serializers.deserialize(value, specifiedType: const FullType(double)) as double;
+          result.minTemp = serializers.deserialize(value,
+              specifiedType: const FullType(double)) as double;
           break;
         case 'max_temp':
-          result.maxTemp = serializers.deserialize(value, specifiedType: const FullType(double)) as double;
+          result.maxTemp = serializers.deserialize(value,
+              specifiedType: const FullType(double)) as double;
           break;
         case 'the_temp':
-          result.theTemp = serializers.deserialize(value, specifiedType: const FullType(double)) as double;
+          result.theTemp = serializers.deserialize(value,
+              specifiedType: const FullType(double)) as double;
           break;
         case 'humidity':
-          result.humidity = serializers.deserialize(value, specifiedType: const FullType(int)) as int;
+          result.humidity = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
           break;
         case 'visibility':
-          result.visibility = serializers.deserialize(value, specifiedType: const FullType(double)) as double;
+          result.visibility = serializers.deserialize(value,
+              specifiedType: const FullType(double)) as double;
           break;
       }
     }
@@ -276,7 +315,8 @@ class _$AppState extends AppState {
   @override
   final String query;
 
-  factory _$AppState([void Function(AppStateBuilder) updates]) => (new AppStateBuilder()..update(updates)).build();
+  factory _$AppState([void Function(AppStateBuilder) updates]) =>
+      (new AppStateBuilder()..update(updates)).build();
 
   _$AppState._(
       {this.weatherData,
@@ -306,7 +346,8 @@ class _$AppState extends AppState {
   }
 
   @override
-  AppState rebuild(void Function(AppStateBuilder) updates) => (toBuilder()..update(updates)).build();
+  AppState rebuild(void Function(AppStateBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
 
   @override
   AppStateBuilder toBuilder() => new AppStateBuilder()..replace(this);
@@ -331,7 +372,11 @@ class _$AppState extends AppState {
         $jc(
             $jc(
                 $jc(
-                    $jc($jc($jc($jc(0, weatherData.hashCode), locations.hashCode), pendingActions.hashCode),
+                    $jc(
+                        $jc(
+                            $jc($jc(0, weatherData.hashCode),
+                                locations.hashCode),
+                            pendingActions.hashCode),
                         searchResult.hashCode),
                     unit.hashCode),
                 location.hashCode),
@@ -358,20 +403,28 @@ class AppStateBuilder implements Builder<AppState, AppStateBuilder> {
   _$AppState _$v;
 
   MapBuilder<int, LocationWeather> _weatherData;
-  MapBuilder<int, LocationWeather> get weatherData => _$this._weatherData ??= new MapBuilder<int, LocationWeather>();
-  set weatherData(MapBuilder<int, LocationWeather> weatherData) => _$this._weatherData = weatherData;
+  MapBuilder<int, LocationWeather> get weatherData =>
+      _$this._weatherData ??= new MapBuilder<int, LocationWeather>();
+  set weatherData(MapBuilder<int, LocationWeather> weatherData) =>
+      _$this._weatherData = weatherData;
 
   MapBuilder<int, Location> _locations;
-  MapBuilder<int, Location> get locations => _$this._locations ??= new MapBuilder<int, Location>();
-  set locations(MapBuilder<int, Location> locations) => _$this._locations = locations;
+  MapBuilder<int, Location> get locations =>
+      _$this._locations ??= new MapBuilder<int, Location>();
+  set locations(MapBuilder<int, Location> locations) =>
+      _$this._locations = locations;
 
   SetBuilder<String> _pendingActions;
-  SetBuilder<String> get pendingActions => _$this._pendingActions ??= new SetBuilder<String>();
-  set pendingActions(SetBuilder<String> pendingActions) => _$this._pendingActions = pendingActions;
+  SetBuilder<String> get pendingActions =>
+      _$this._pendingActions ??= new SetBuilder<String>();
+  set pendingActions(SetBuilder<String> pendingActions) =>
+      _$this._pendingActions = pendingActions;
 
   ListBuilder<Location> _searchResult;
-  ListBuilder<Location> get searchResult => _$this._searchResult ??= new ListBuilder<Location>();
-  set searchResult(ListBuilder<Location> searchResult) => _$this._searchResult = searchResult;
+  ListBuilder<Location> get searchResult =>
+      _$this._searchResult ??= new ListBuilder<Location>();
+  set searchResult(ListBuilder<Location> searchResult) =>
+      _$this._searchResult = searchResult;
 
   MeasurementUnit _unit;
   MeasurementUnit get unit => _$this._unit;
@@ -383,7 +436,8 @@ class AppStateBuilder implements Builder<AppState, AppStateBuilder> {
 
   int _selectedLocationId;
   int get selectedLocationId => _$this._selectedLocationId;
-  set selectedLocationId(int selectedLocationId) => _$this._selectedLocationId = selectedLocationId;
+  set selectedLocationId(int selectedLocationId) =>
+      _$this._selectedLocationId = selectedLocationId;
 
   String _query;
   String get query => _$this._query;
@@ -448,7 +502,8 @@ class AppStateBuilder implements Builder<AppState, AppStateBuilder> {
         _$failedField = 'location';
         _location?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError('AppState', _$failedField, e.toString());
+        throw new BuiltValueNestedFieldError(
+            'AppState', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -465,7 +520,8 @@ class _$LatLng extends LatLng {
   @override
   final String city;
 
-  factory _$LatLng([void Function(LatLngBuilder) updates]) => (new LatLngBuilder()..update(updates)).build();
+  factory _$LatLng([void Function(LatLngBuilder) updates]) =>
+      (new LatLngBuilder()..update(updates)).build();
 
   _$LatLng._({this.lat, this.lon, this.city}) : super._() {
     if (lat == null) {
@@ -480,7 +536,8 @@ class _$LatLng extends LatLng {
   }
 
   @override
-  LatLng rebuild(void Function(LatLngBuilder) updates) => (toBuilder()..update(updates)).build();
+  LatLng rebuild(void Function(LatLngBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
 
   @override
   LatLngBuilder toBuilder() => new LatLngBuilder()..replace(this);
@@ -488,7 +545,10 @@ class _$LatLng extends LatLng {
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is LatLng && lat == other.lat && lon == other.lon && city == other.city;
+    return other is LatLng &&
+        lat == other.lat &&
+        lon == other.lon &&
+        city == other.city;
   }
 
   @override
@@ -498,7 +558,11 @@ class _$LatLng extends LatLng {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('LatLng')..add('lat', lat)..add('lon', lon)..add('city', city)).toString();
+    return (newBuiltValueToStringHelper('LatLng')
+          ..add('lat', lat)
+          ..add('lon', lon)
+          ..add('city', city))
+        .toString();
   }
 }
 
@@ -558,7 +622,8 @@ class _$Location extends Location {
   @override
   final String locationType;
 
-  factory _$Location([void Function(LocationBuilder) updates]) => (new LocationBuilder()..update(updates)).build();
+  factory _$Location([void Function(LocationBuilder) updates]) =>
+      (new LocationBuilder()..update(updates)).build();
 
   _$Location._({this.id, this.title, this.locationType}) : super._() {
     if (id == null) {
@@ -573,7 +638,8 @@ class _$Location extends Location {
   }
 
   @override
-  Location rebuild(void Function(LocationBuilder) updates) => (toBuilder()..update(updates)).build();
+  Location rebuild(void Function(LocationBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
 
   @override
   LocationBuilder toBuilder() => new LocationBuilder()..replace(this);
@@ -581,12 +647,16 @@ class _$Location extends Location {
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is Location && id == other.id && title == other.title && locationType == other.locationType;
+    return other is Location &&
+        id == other.id &&
+        title == other.title &&
+        locationType == other.locationType;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, id.hashCode), title.hashCode), locationType.hashCode));
+    return $jf(
+        $jc($jc($jc(0, id.hashCode), title.hashCode), locationType.hashCode));
   }
 
   @override
@@ -641,7 +711,8 @@ class LocationBuilder implements Builder<Location, LocationBuilder> {
 
   @override
   _$Location build() {
-    final _$result = _$v ?? new _$Location._(id: id, title: title, locationType: locationType);
+    final _$result = _$v ??
+        new _$Location._(id: id, title: title, locationType: locationType);
     replace(_$result);
     return _$result;
   }
@@ -661,7 +732,8 @@ class _$LocationWeather extends LocationWeather {
   factory _$LocationWeather([void Function(LocationWeatherBuilder) updates]) =>
       (new LocationWeatherBuilder()..update(updates)).build();
 
-  _$LocationWeather._({this.id, this.weather, this.sunRise, this.sunSet}) : super._() {
+  _$LocationWeather._({this.id, this.weather, this.sunRise, this.sunSet})
+      : super._() {
     if (id == null) {
       throw new BuiltValueNullFieldError('LocationWeather', 'id');
     }
@@ -677,13 +749,16 @@ class _$LocationWeather extends LocationWeather {
   }
 
   @override
-  List<WeatherPoint> get futureWeather => __futureWeather ??= super.futureWeather;
+  List<WeatherPoint> get futureWeather =>
+      __futureWeather ??= super.futureWeather;
 
   @override
-  LocationWeather rebuild(void Function(LocationWeatherBuilder) updates) => (toBuilder()..update(updates)).build();
+  LocationWeather rebuild(void Function(LocationWeatherBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
 
   @override
-  LocationWeatherBuilder toBuilder() => new LocationWeatherBuilder()..replace(this);
+  LocationWeatherBuilder toBuilder() =>
+      new LocationWeatherBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -697,7 +772,9 @@ class _$LocationWeather extends LocationWeather {
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc($jc(0, id.hashCode), weather.hashCode), sunRise.hashCode), sunSet.hashCode));
+    return $jf($jc(
+        $jc($jc($jc(0, id.hashCode), weather.hashCode), sunRise.hashCode),
+        sunSet.hashCode));
   }
 
   @override
@@ -711,7 +788,8 @@ class _$LocationWeather extends LocationWeather {
   }
 }
 
-class LocationWeatherBuilder implements Builder<LocationWeather, LocationWeatherBuilder> {
+class LocationWeatherBuilder
+    implements Builder<LocationWeather, LocationWeatherBuilder> {
   _$LocationWeather _$v;
 
   int _id;
@@ -719,7 +797,8 @@ class LocationWeatherBuilder implements Builder<LocationWeather, LocationWeather
   set id(int id) => _$this._id = id;
 
   ListBuilder<WeatherPoint> _weather;
-  ListBuilder<WeatherPoint> get weather => _$this._weather ??= new ListBuilder<WeatherPoint>();
+  ListBuilder<WeatherPoint> get weather =>
+      _$this._weather ??= new ListBuilder<WeatherPoint>();
   set weather(ListBuilder<WeatherPoint> weather) => _$this._weather = weather;
 
   DateTime _sunRise;
@@ -760,14 +839,20 @@ class LocationWeatherBuilder implements Builder<LocationWeather, LocationWeather
   _$LocationWeather build() {
     _$LocationWeather _$result;
     try {
-      _$result = _$v ?? new _$LocationWeather._(id: id, weather: weather.build(), sunRise: sunRise, sunSet: sunSet);
+      _$result = _$v ??
+          new _$LocationWeather._(
+              id: id,
+              weather: weather.build(),
+              sunRise: sunRise,
+              sunSet: sunSet);
     } catch (_) {
       String _$failedField;
       try {
         _$failedField = 'weather';
         weather.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError('LocationWeather', _$failedField, e.toString());
+        throw new BuiltValueNestedFieldError(
+            'LocationWeather', _$failedField, e.toString());
       }
       rethrow;
     }
@@ -843,16 +928,20 @@ class _$WeatherPoint extends WeatherPoint {
   }
 
   @override
-  double get minTempFahrenheit => __minTempFahrenheit ??= super.minTempFahrenheit;
+  double get minTempFahrenheit =>
+      __minTempFahrenheit ??= super.minTempFahrenheit;
 
   @override
-  double get maxTempFahrenheit => __maxTempFahrenheit ??= super.maxTempFahrenheit;
+  double get maxTempFahrenheit =>
+      __maxTempFahrenheit ??= super.maxTempFahrenheit;
 
   @override
-  double get theTempFahrenheit => __theTempFahrenheit ??= super.theTempFahrenheit;
+  double get theTempFahrenheit =>
+      __theTempFahrenheit ??= super.theTempFahrenheit;
 
   @override
-  WeatherPoint rebuild(void Function(WeatherPointBuilder) updates) => (toBuilder()..update(updates)).build();
+  WeatherPoint rebuild(void Function(WeatherPointBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
 
   @override
   WeatherPointBuilder toBuilder() => new WeatherPointBuilder()..replace(this);
@@ -879,7 +968,11 @@ class _$WeatherPoint extends WeatherPoint {
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc($jc(0, id.hashCode), weatherStateName.hashCode), weatherStateAbbr.hashCode),
+                        $jc(
+                            $jc(
+                                $jc($jc(0, id.hashCode),
+                                    weatherStateName.hashCode),
+                                weatherStateAbbr.hashCode),
                             applicableDate.hashCode),
                         minTemp.hashCode),
                     maxTemp.hashCode),
@@ -904,7 +997,8 @@ class _$WeatherPoint extends WeatherPoint {
   }
 }
 
-class WeatherPointBuilder implements Builder<WeatherPoint, WeatherPointBuilder> {
+class WeatherPointBuilder
+    implements Builder<WeatherPoint, WeatherPointBuilder> {
   _$WeatherPoint _$v;
 
   int _id;
@@ -913,15 +1007,18 @@ class WeatherPointBuilder implements Builder<WeatherPoint, WeatherPointBuilder> 
 
   String _weatherStateName;
   String get weatherStateName => _$this._weatherStateName;
-  set weatherStateName(String weatherStateName) => _$this._weatherStateName = weatherStateName;
+  set weatherStateName(String weatherStateName) =>
+      _$this._weatherStateName = weatherStateName;
 
   String _weatherStateAbbr;
   String get weatherStateAbbr => _$this._weatherStateAbbr;
-  set weatherStateAbbr(String weatherStateAbbr) => _$this._weatherStateAbbr = weatherStateAbbr;
+  set weatherStateAbbr(String weatherStateAbbr) =>
+      _$this._weatherStateAbbr = weatherStateAbbr;
 
   DateTime _applicableDate;
   DateTime get applicableDate => _$this._applicableDate;
-  set applicableDate(DateTime applicableDate) => _$this._applicableDate = applicableDate;
+  set applicableDate(DateTime applicableDate) =>
+      _$this._applicableDate = applicableDate;
 
   double _minTemp;
   double get minTemp => _$this._minTemp;

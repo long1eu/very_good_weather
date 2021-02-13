@@ -11,21 +11,15 @@ import 'package:very_good_weather/src/epics/app_epics.dart';
 import 'package:very_good_weather/src/models/index.dart';
 import 'package:very_good_weather/src/models/serializers.dart';
 import 'package:very_good_weather/src/reducer/reducer.dart';
+import 'package:http/http.dart';
 
 typedef Init = Future<Store<AppState>> Function();
 
 Future<Store<AppState>> init() async {
-  final ChopperClient chopper = ChopperClient(
-    converter: builtValueConverter,
-    errorConverter: builtValueConverter,
-    services: <ChopperService>[
-      LocationService.create(),
-      MetaWeatherService.create(),
-    ],
-  );
+  final Client client = Client();
 
-  final MetaWeatherApi metaWeatherApi = MetaWeatherApi(service: chopper.getService<MetaWeatherService>());
-  final LocationApi locationApi = LocationApi(service: chopper.getService<LocationService>());
+  final MetaWeatherApi metaWeatherApi = MetaWeatherApi(client: client);
+  final LocationApi locationApi = LocationApi(client: client);
   final AppEpics appEpics = AppEpics(metaWeatherApi: metaWeatherApi, locationApi: locationApi);
 
   return Store<AppState>(

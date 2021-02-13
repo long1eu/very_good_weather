@@ -24,9 +24,8 @@ class LocationEpics {
 
   Stream<AppAction> _getLocation(Stream<GetLocation$> actions, EpicStore<AppState> store) {
     return actions //
-        .flatMap((GetLocation$ action) => _api
-            .getLocation()
-            .asStream()
+        .flatMap((GetLocation$ action) => Stream<void>.value(null)
+            .asyncMap((_) => _api.getLocation())
             .expand((LatLng location) => <AppAction>[
                   GetLocation.successful(location),
                   SearchLocation.query(location.city),
